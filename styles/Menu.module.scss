@@ -1,0 +1,40 @@
+@import "variables";
+
+.menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  background-color: $color-secondary;
+  height: 110vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.menuHide {
+  display: none;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & li {
+    color: $color-tertiary;
+    text-decoration: none;
+    padding: 40px;
+    font-size: 2rem;
+  }
+}
+
+.activePage {
+  color: $color-tertiary;
+  border-bottom: $color-tertiary;
+}
+
+.inactivePage {
+}

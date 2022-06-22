@@ -1,0 +1,19 @@
+// Darkmode
+$background-image: url(../public/images/astronaut.jpeg);
+
+$color-primary: #2c4b4b;
+$color-secondary: #131e1e;
+$color-tertiary: #ffd486;
+
+$color-text-primary: #95b7b7;
+$color-text-secondary: #95b7b770;
+
+//lightmode
+$font-audiowide: "Audiowide", cursive;
+
+// mixin Desktop
+@mixin desktop {
+  @media (min-width: 960px) {
+    @content;
+  }
+}

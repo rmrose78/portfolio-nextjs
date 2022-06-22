@@ -1,0 +1,85 @@
+@import "variables";
+
+.navEmptySpace {
+  height: 7vh;
+  width: 100vw;
+
+  @include desktop {
+    height: 8vh;
+  }
+}
+.main {
+  color: $color-text-primary;
+}
+
+.titleCtr {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+
+  & h1 {
+    font-family: $font-audiowide;
+    color: $color-tertiary;
+  }
+}
+
+// Form
+
+.form {
+  color: $color-text-primary;
+  font-family: $font-audiowide;
+  width: 80%;
+  height: 80%;
+  margin: 40px auto;
+
+  @include desktop {
+    width: 40%;
+  }
+
+  & div {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  & label {
+    color: $color-text-primary;
+  }
+
+  & input,
+  & textarea {
+    padding-left: 5px;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: $color-tertiary;
+    border: solid 1px $color-text-primary;
+    border-radius: 0.52rem;
+    font-size: 1.4rem;
+  }
+
+  & input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px $color-primary inset !important;
+      -webkit-text-fill-color: $color-tertiary !important;
+    }
+  }
+}
+
+.btnCtr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    padding: 8px 16px;
+    background-color: $color-tertiary;
+    border-radius: 0.2rem;
+    color: $color-secondary;
+  }
+}
