@@ -13,6 +13,7 @@ export default function Home({ mobileStatus }) {
       <Apod mobileStatus={mobileStatus} />
       <div className={styles.bgImage}>
         <Image
+          style={"border: solid 5px $color-tertiary"}
           priority
           src={bgImage}
           layout="fill"

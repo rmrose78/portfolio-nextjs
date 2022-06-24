@@ -1,7 +1,6 @@
 import styles from "../styles/Menu.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Navbar from "./Navbar";
 
 function Menu({ menuClick, handleMenuClick }) {
   const pathname = useRouter().pathname;

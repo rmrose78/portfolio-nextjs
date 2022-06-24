@@ -24,13 +24,13 @@ function Apod({ mobileStatus }) {
       .finally(() => setLoading(false));
   }, []);
 
+  // if (loading) return "loading...";
+  // if (error) return "Error!";
+
   // Content toggle
   const handleClick = () => {
     setDisplay(!display);
   };
-
-  if (loading) return "loading...";
-  if (error) return "Error!";
 
   return (
     <>

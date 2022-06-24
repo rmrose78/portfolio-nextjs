@@ -5,4 +5,8 @@ export default async function handler(req, res) {
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_APOD_API_KEY}`
   ).then((response) => response.json());
   res.status(200).json(data);
+  const data2 = await fetch(
+    `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_APOD_API_KEY}`
+  ).then((response) => response.json());
+  res.status(200).json(data2);
 }
