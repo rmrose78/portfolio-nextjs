@@ -1,7 +1,7 @@
 @import "variables";
 
 .nav {
-  position: static;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,27 +21,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
+  width: 200px;
 }
 
 .name {
   font-family: $font-audiowide;
   padding: 0 10px;
-  font-size: 1rem;
-  color: $color-text-primary;
+  font-size: 1.1rem;
+  color: $color-text-secondary;
   transition: 0.7s;
   cursor: pointer;
   letter-spacing: 0rem;
 
   &:hover {
     color: $color-tertiary;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 
 .nameR {
   font-family: $font-audiowide;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: $color-tertiary;
 }
 

@@ -4,7 +4,7 @@
 .contentCtr {
   position: absolute;
   background-color: $color-secondary;
-  height: 100.5vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,11 +15,9 @@
     width: 35vw;
     height: 80vh;
     top: 10vh;
-    right: 0;
-    border-radius: 0.5rem 0 0 0.5rem;
-    border-top: solid 0.5px $color-tertiary;
-    border-left: solid 0.5px $color-tertiary;
-    border-bottom: solid 0.5px $color-tertiary;
+    right: 50px;
+    border-radius: 0.5rem;
+    border: solid 0.5px $color-tertiary;
   }
 }
 
@@ -87,7 +85,7 @@
 
   & h4 {
     text-align: center;
-    padding: 10px 30px;
+    padding: 10px 20px;
   }
 
   & p {

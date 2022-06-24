@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { XIcon } from "@heroicons/react/solid";
 import styles from "../styles/Apod.module.scss";
 import Image from "next/image";
+import axios from "axios";
 
 function Apod({ mobileStatus }) {
   let [imageData, setImageData] = useState(null);
@@ -9,23 +10,21 @@ function Apod({ mobileStatus }) {
   let [loading, setLoading] = useState(true);
   let [display, setDisplay] = useState(false);
 
-  // Fetch APOD api
   useEffect(() => {
-    fetch("api/hello")
-      .then((response) => {
-        if (response.ok) return response.json();
-        else throw response;
-      })
-      .then((data) => setImageData(data))
-      .catch((error) => {
-        console.error("Error found: ", error);
-        setError(error);
-      })
-      .finally(() => setLoading(false));
+    async function getImageData() {
+      try {
+        let response = await axios.get("api/apodDefault");
+        setImageData(response.data);
+        console.log(mageData.media_type);
+        if (imageData.media_type !== "image") {
+          response = await axios.get("api/apodSecondary");
+        }
+      } catch {
+        console.log(`Error found: ${error}`);
+      }
+    }
+    getImageData();
   }, []);
-
-  // if (loading) return "loading...";
-  // if (error) return "Error!";
 
   // Content toggle
   const handleClick = () => {
