@@ -1,30 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { XIcon } from "@heroicons/react/solid";
 import styles from "../styles/Apod.module.scss";
 import Image from "next/image";
 import axios from "axios";
 
 function Apod({ mobileStatus }) {
-  let [imageData, setImageData] = useState(null);
-  let [error, setError] = useState(null);
-  let [loading, setLoading] = useState(true);
+  let [imageData, setImageData] = useState("");
   let [display, setDisplay] = useState(false);
+  let [error, setError] = useState("");
 
   useEffect(() => {
-    async function getImageData() {
-      try {
-        let response = await axios.get("api/apodDefault");
-        setImageData(response.data);
-        console.log(mageData.media_type);
-        if (imageData.media_type !== "image") {
-          response = await axios.get("api/apodSecondary");
-        }
-      } catch {
-        console.log(`Error found: ${error}`);
-      }
-    }
-    getImageData();
+    const getImageData = async () => {
+      let response = await axios.get("api/apodDefault");
+      setImageData(response.data);
+    };
+
+    getImageData().catch(console.error);
   }, []);
+
+  useEffect(() => {
+    if (imageData.media_type !== "image") {
+      const getImageData = async () => {
+        let response = await axios.get("api/apodSecondary");
+        setImageData(response.data);
+      };
+
+      getImageData().catch(console.error);
+    }
+  }, [imageData]);
 
   // Content toggle
   const handleClick = () => {

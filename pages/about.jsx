@@ -28,8 +28,8 @@ function About({ mobileStatus }) {
                 priority
                 src={profilePic}
                 layout="fill"
-                objectFit="contain"
-                alt="Ryan with baby"
+                objectFit="cover"
+                alt="Ryan with daughter wearing sunglasses"
               />
             </div>
           </div>
@@ -76,7 +76,7 @@ function About({ mobileStatus }) {
               >
                 <span className={styles.vetsWhoCode}>#VetsWhoCode</span>
               </a>
-              . I find interest in all side of development, but currently
+              . I find interest in all sides of development, but currently
               focusing on the Frontend. Constantly learning new things keeps
               life interesting!
             </p>

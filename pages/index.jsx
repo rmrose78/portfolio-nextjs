@@ -5,11 +5,13 @@ import Apod from "../components/Apod";
 import styles from "../styles/Home.module.scss";
 import bgImage from "../public/images/astronaut.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import StoicQuote from "../components/StoicQuote";
 
 export default function Home({ mobileStatus }) {
   return (
     <>
       <Navbar />
+      <StoicQuote />
       <Apod mobileStatus={mobileStatus} />
       <div className={styles.bgImage}>
         <Image
