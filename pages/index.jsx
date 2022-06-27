@@ -52,7 +52,7 @@ export default function Home({ mobileStatus }) {
               <FontAwesomeIcon icon={["fab", "linkedin"]} />
             </a>
           </div>
-          <div>
+          {/* <div>
             <a
               href="https://twitter.com/RyanRos79331176"
               target="_blank"
@@ -60,7 +60,7 @@ export default function Home({ mobileStatus }) {
             >
               <FontAwesomeIcon icon={["fab", "twitter"]} />
             </a>
-          </div>
+          </div> */}
         </div>
       </main>
     </>
