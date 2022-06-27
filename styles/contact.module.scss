@@ -83,3 +83,23 @@
     color: $color-secondary;
   }
 }
+
+.thankYouCtr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding-top: 100px;
+
+  & h1 {
+    font-size: 5rem;
+    color: $color-tertiary;
+  }
+
+  & h3 {
+    color: $color-text-primary;
+  }
+}
