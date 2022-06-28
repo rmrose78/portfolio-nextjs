@@ -8,6 +8,7 @@ function Apod({ mobileStatus }) {
   let [imageData, setImageData] = useState("");
   let [display, setDisplay] = useState(false);
   let [error, setError] = useState("");
+  // let [secondaryFetch, setSecondaryFetch] = useState(true);
 
   useEffect(() => {
     const getImageData = async () => {
@@ -18,16 +19,17 @@ function Apod({ mobileStatus }) {
     getImageData().catch(console.error);
   }, []);
 
-  useEffect(() => {
-    if (imageData.media_type !== "image") {
-      const getImageData = async () => {
-        let response = await axios.get("api/apodSecondary");
-        setImageData(response.data);
-      };
+  // useEffect(() => {
+  //   if (imageData.media_type !== "image" && secondaryFetch) {
+  //     const getImageData = async () => {
+  //       let response = await axios.get("api/apodSecondary");
+  //       setImageData(response.data);
+  //     };
 
-      getImageData().catch(console.error);
-    }
-  }, [imageData]);
+  //     getImageData().catch(console.error);
+  //   }
+  //   return setSecondaryFetch(false);
+  // }, [imageData]);
 
   // Content toggle
   const handleClick = () => {
