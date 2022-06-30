@@ -31,7 +31,6 @@ function Apod({ mobileStatus }) {
   //   return setSecondaryFetch(false);
   // }, [imageData]);
 
-  // Content toggle
   const handleClick = () => {
     setDisplay(!display);
   };
