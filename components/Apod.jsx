@@ -4,7 +4,7 @@ import styles from "../styles/Apod.module.scss";
 import Image from "next/image";
 import axios from "axios";
 
-function Apod({ mobileStatus }) {
+function Apod({ mobileStatus, skipNavRef, onKeyPressSkipNav }) {
   let [imageData, setImageData] = useState("");
   let [display, setDisplay] = useState(false);
   let [error, setError] = useState("");
@@ -66,13 +66,13 @@ function Apod({ mobileStatus }) {
         </div>
       ) : mobileStatus ? (
         <div>
-          <button className={styles.btn} onClick={handleClick}>
+          <button ref={skipNavRef} className={styles.btn} onClick={handleClick}>
             APOD
           </button>
         </div>
       ) : (
         <div>
-          <button className={styles.btn} onClick={handleClick}>
+          <button ref={skipNavRef} className={styles.btn} onClick={handleClick}>
             Astronomy PoD
           </button>
         </div>
