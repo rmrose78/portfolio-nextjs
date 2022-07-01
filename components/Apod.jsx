@@ -50,18 +50,6 @@ function Apod({ mobileStatus }) {
 
   let [display, setDisplay] = useState(false);
 
-  // let [imageData, setImageData] = useState("");
-  // let [error, setError] = useState("");
-
-  // useEffect(() => {
-  //   const getImageData = async () => {
-  //     let response = await axios.get("api/apodDefault");
-  //     setImageData(response.data);
-  //   };
-
-  //   getImageData().catch(console.error);
-  // }, []);
-
   // let [secondaryFetch, setSecondaryFetch] = useState(true);
 
   // useEffect(() => {
