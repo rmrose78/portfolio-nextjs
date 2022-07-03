@@ -21,7 +21,7 @@ export default function Home({ mobileStatus }) {
         className={styles.skipNav}
         onClick={handleSkipNav}
         onKeyPress={(e) => {
-          if (e.key === "Enter") handleSkipNav();
+          handleSkipNav();
         }}
       >
         Skip Navigation
