@@ -1,23 +1,56 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import { XIcon } from "@heroicons/react/solid";
 import styles from "../styles/Apod.module.scss";
 import Image from "next/image";
 import axios from "axios";
 
-function Apod({ mobileStatus, skipNavRef, onKeyPressSkipNav }) {
-  let [imageData, setImageData] = useState("");
-  let [display, setDisplay] = useState(false);
-  let [error, setError] = useState("");
-  // let [secondaryFetch, setSecondaryFetch] = useState(true);
+const ACTIONS = {
+  CALL_API: "call-api",
+  SUCCESS: "success",
+  ERROR: "error",
+};
+
+const apodDataReducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.CALL_API:
+      return { ...state, loading: true };
+    case ACTIONS.SUCCESS:
+      return { ...state, loading: false, apodData: action.data };
+    case ACTIONS.ERROR:
+      return { ...state, loading: false, error: action.error };
+  }
+};
+
+const intialState = {
+  apodData: "",
+  loading: false,
+  error: null,
+};
+
+function Apod({ mobileStatus }) {
+  const [state, dispatch] = useReducer(apodDataReducer, intialState);
+  const { apodData, loading, error } = state;
 
   useEffect(() => {
-    const getImageData = async () => {
+    dispatch({ type: ACTIONS.CALL_API });
+    const getApodData = async () => {
       let response = await axios.get("api/apodDefault");
-      setImageData(response.data);
+      if (response.status == 200) {
+        dispatch({ type: ACTIONS.SUCCESS, data: response.data });
+      }
+      dispatch({ type: ACTIONS.ERROR, error: response.error });
     };
 
-    getImageData().catch(console.error);
+    getApodData();
   }, []);
+
+  useEffect(() => {
+    console.log(state.apodData);
+  }, [state.apodData]);
+
+  let [display, setDisplay] = useState(false);
+
+  // let [secondaryFetch, setSecondaryFetch] = useState(true);
 
   // useEffect(() => {
   //   if (imageData.media_type !== "image" && secondaryFetch) {
@@ -35,6 +68,9 @@ function Apod({ mobileStatus, skipNavRef, onKeyPressSkipNav }) {
     setDisplay(!display);
   };
 
+  if (loading === true) "Loading...";
+  if (error === true) `error found ${error}`;
+
   return (
     <>
       {display ? (
@@ -46,10 +82,10 @@ function Apod({ mobileStatus, skipNavRef, onKeyPressSkipNav }) {
           <div className={styles.upperCtr}>
             <h4 className={styles.apodTitle}>Astronomy Picture of the Day</h4>
 
-            <a href={imageData.hdurl} target="blank">
+            <a href={apodData.hdurl} target="blank">
               <div className={styles.imgCtr}>
                 <Image
-                  src={imageData.url}
+                  src={apodData.url}
                   layout="fill"
                   objectFit="contain"
                   alt="Nasa Astronomy of the Day"
@@ -59,9 +95,9 @@ function Apod({ mobileStatus, skipNavRef, onKeyPressSkipNav }) {
           </div>
           <div className={styles.lowerCtr}>
             <div className={styles.titleCtr}>
-              <h4>{imageData.title}</h4>
+              <h4>{apodData.title}</h4>
             </div>
-            <p>{imageData.explanation}</p>
+            <p>{apodData.explanation}</p>
           </div>
         </div>
       ) : mobileStatus ? (
