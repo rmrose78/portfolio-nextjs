@@ -102,13 +102,13 @@ function Apod({ mobileStatus }) {
         </div>
       ) : mobileStatus ? (
         <div>
-          <button className={styles.btn} onClick={handleClick}>
+          <button ref={skipNavRef} className={styles.btn} onClick={handleClick}>
             APOD
           </button>
         </div>
       ) : (
         <div>
-          <button className={styles.btn} onClick={handleClick}>
+          <button ref={skipNavRef} className={styles.btn} onClick={handleClick}>
             Astronomy PoD
           </button>
         </div>

@@ -1,18 +1,34 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Apod from "../components/Apod";
-
+import React, { useRef, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 import bgImage from "../public/images/astronaut.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StoicQuote from "../components/StoicQuote";
 
 export default function Home({ mobileStatus }) {
+  const skipNavRef = useRef();
+
+  const handleSkipNav = () => {
+    skipNavRef.current.focus();
+  };
+
   return (
     <>
+      <a
+        tabIndex={0}
+        className={styles.skipNav}
+        onClick={handleSkipNav}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") handleSkipNav();
+        }}
+      >
+        Skip Navigation
+      </a>
       <Navbar />
       <StoicQuote />
-      <Apod mobileStatus={mobileStatus} />
+      <Apod mobileStatus={mobileStatus} skipNavRef={skipNavRef} />
       <div className={styles.bgImage}>
         <Image
           priority
@@ -23,7 +39,7 @@ export default function Home({ mobileStatus }) {
         />
       </div>
 
-      <main className={styles.main}>
+      <main id="main" className={styles.main}>
         {/* Title banner */}
         <div className={styles.mainTextCtr}>
           <h1>-- Hi I&apos;m --</h1>
