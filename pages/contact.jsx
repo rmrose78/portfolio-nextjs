@@ -51,7 +51,6 @@ function Contact() {
         </form>
 
         {/* {submitted ? (
-         
         ) : (
           <div className={styles.thankYouCtr}>
             <h1>Thank you!</h1>

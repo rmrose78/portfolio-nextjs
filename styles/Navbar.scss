@@ -1,0 +1,66 @@
+@import "variables";
+
+.nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  width: 100vw;
+  z-index: 998;
+  // Maybe have no border and linear gradient on homepage
+
+  @include desktop {
+    height: 8vh;
+  }
+}
+
+.nameLogoCtr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.nav__name {
+  font-family: $font-audiowide;
+  padding: 0 10px;
+  font-size: 1.1rem;
+  transition: 0.7s;
+  cursor: pointer;
+  letter-spacing: 0rem;
+
+  &:hover {
+    font-size: 1.5rem;
+  }
+}
+
+.nav__nameR {
+  font-family: $font-audiowide;
+  font-size: 1.5rem;
+}
+
+.hamburgerCtr {
+  @include desktop {
+    display: none;
+  }
+}
+
+.list {
+  display: none;
+
+  @include desktop {
+    display: flex;
+
+    list-style: none;
+    padding: 30px;
+
+    & li {
+      cursor: pointer;
+      margin: 0 30px;
+      padding: 0 10px;
+      font-size: 1.5rem;
+      transition: 0.4s;
+    }
+  }
+}

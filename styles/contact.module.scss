@@ -8,8 +8,10 @@
     height: 8vh;
   }
 }
+
 .main {
-  color: $color-text-primary;
+  width: 100vw;
+  z-index: -2;
 }
 
 .titleCtr {

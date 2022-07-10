@@ -27,7 +27,7 @@ const intialState = {
   error: null,
 };
 
-function Apod({ mobileStatus }) {
+function Apod({ mobileStatus, skipNavRef }) {
   const [state, dispatch] = useReducer(apodDataReducer, intialState);
   const { apodData, loading, error } = state;
 
@@ -44,25 +44,11 @@ function Apod({ mobileStatus }) {
     getApodData();
   }, []);
 
-  useEffect(() => {
-    console.log(state.apodData);
-  }, [state.apodData]);
+  // useEffect(() => {
+  //   console.log(state.apodData);
+  // }, [state.apodData]);
 
   let [display, setDisplay] = useState(false);
-
-  // let [secondaryFetch, setSecondaryFetch] = useState(true);
-
-  // useEffect(() => {
-  //   if (imageData.media_type !== "image" && secondaryFetch) {
-  //     const getImageData = async () => {
-  //       let response = await axios.get("api/apodSecondary");
-  //       setImageData(response.data);
-  //     };
-
-  //     getImageData().catch(console.error);
-  //   }
-  //   return setSecondaryFetch(false);
-  // }, [imageData]);
 
   const handleClick = () => {
     setDisplay(!display);

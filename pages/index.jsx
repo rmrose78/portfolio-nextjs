@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Apod from "../components/Apod";
-import React, { useRef, useEffect } from "react";
-import styles from "../styles/Home.module.scss";
+import React, { useEffect, useRef, useState } from "react";
 import bgImage from "../public/images/astronaut.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StoicQuote from "../components/StoicQuote";
@@ -18,10 +17,10 @@ export default function Home({ mobileStatus }) {
     <>
       <a
         tabIndex={0}
-        className={styles.skipNav}
+        className="skipNav text-lm-secondary dark:text-dm-secondary bg-lm-tertiary dark:bg-dm-tertiary"
         onClick={handleSkipNav}
         onKeyPress={(e) => {
-          handleSkipNav();
+          handleSkipNav(e);
         }}
       >
         Skip Navigation
@@ -29,7 +28,7 @@ export default function Home({ mobileStatus }) {
       <Navbar />
       <StoicQuote />
       <Apod mobileStatus={mobileStatus} skipNavRef={skipNavRef} />
-      <div className={styles.bgImage}>
+      <div className="bgImage">
         <Image
           priority
           src={bgImage}
@@ -39,17 +38,19 @@ export default function Home({ mobileStatus }) {
         />
       </div>
 
-      <main id="main" className={styles.main}>
+      <main id="main" className="main">
         {/* Title banner */}
-        <div className={styles.mainTextCtr}>
+        <div className="mainTextCtr text-lm-secondary dark:text-dm-secondary">
           <h1>-- Hi I&apos;m --</h1>
           {/* <h1 className={styles.name}>Ryan Rose</h1> */}
-          <div className={styles.titleCtr}>
-            <h3>A Frontend Developer</h3>
+          <div className="titleCtr text-lm-secondary dark:text-dm-secondary">
+            <h3 className="text-lm-secondary dark:text-dm-secondary">
+              A Frontend Developer
+            </h3>
           </div>
         </div>
         {/* Social Media icons */}
-        <div className={styles.socialCtr}>
+        <div className="socialCtr text-lm-tertiary dark:text-dm-tertiary">
           <div>
             <a
               href="https://github.com/rmrose78"

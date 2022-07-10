@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import styles from "../styles/about.module.scss";
 import Image from "next/image";
 import profilePic from "../public/images/twitterPic.jpeg";
 import reactImage from "../public/images/techStackImages/react.svg";
@@ -15,15 +14,15 @@ function About({ mobileStatus }) {
   return (
     <>
       <Navbar />
-      <div className={styles.navEmptySpace}></div>
-      <main className={styles.main}>
-        <div className={styles.titleCtr}>
+      <div className="navEmptySpace"></div>
+      <main className="about__main text-lm-text-primary dark:text-dm-text-primary">
+        <div className="about__titleCtr text-lm-tertiary dark:text-dm-tertiary">
           <h1>-- About --</h1>
         </div>
 
-        <div className={styles.bioCtr}>
-          <div className={styles.profilePicCtr}>
-            <div className={styles.profilePic}>
+        <div className="bioCtr">
+          <div className="profilePicCtr bg-lm-primary dark:bg-dm-primary">
+            <div className="profilePic border-4 border-lm-secondary dark:border-dm-secondary">
               <Image
                 priority
                 src={profilePic}
@@ -35,9 +34,11 @@ function About({ mobileStatus }) {
           </div>
 
           <div>
-            <h3>Learning Focus:</h3>
-            <div className={styles.techCtr}>
-              <div className={styles.techIconCtr}>
+            <h3 className="text-lm-tertiary dark:text-dm-tertiary">
+              Learning Focus:
+            </h3>
+            <div className="techCtr">
+              <div className="techIconCtr">
                 <div>
                   <Image src={html5} alt="react" />
                 </div>
@@ -64,7 +65,9 @@ function About({ mobileStatus }) {
           </div>
 
           <div>
-            <h3>Development Journey</h3>
+            <h3 className="text-lm-tertiary dark:text-dm-tertiary">
+              Development Journey
+            </h3>
             <p>
               Hello, my name is Ryan Rose. I&apos;m a Developer currently based
               out of the Augusta, GA area. Currently, I&apos;m working and
@@ -74,7 +77,9 @@ function About({ mobileStatus }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className={styles.vetsWhoCode}>#VetsWhoCode</span>
+                <span className="vetsWhoCode border-b-[1px] border-lm-tertiary dark:border-dm-tertiary hover:text-lm-tertiary dark:hover:text-dm-tertiary">
+                  #VetsWhoCode
+                </span>
               </a>
               . I find interest in all sides of development, but currently
               focusing on the Frontend. Constantly learning new things keeps
@@ -83,7 +88,9 @@ function About({ mobileStatus }) {
           </div>
 
           <div>
-            <h3>Interests</h3>
+            <h3 className="text-lm-tertiary dark:text-dm-tertiary">
+              Interests
+            </h3>
             <p>
               I am Husband, Father, Veteran and hockey fanatic (#LetsGoAvs).
               When I am not working on improving in web development, I like to

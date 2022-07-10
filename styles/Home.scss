@@ -1,0 +1,87 @@
+@import "variables";
+
+.bgImage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -9;
+}
+
+// Main
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  width: 100vw;
+
+  & > * {
+    font-family: $font-audiowide;
+  }
+}
+
+.mainTextCtr {
+  z-index: 9;
+}
+
+.titleCtr {
+  text-align: center;
+  width: 100%;
+}
+
+.socialCtr {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+  font-size: 2.7rem;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    @include desktop {
+      width: 80px;
+      height: 80px;
+    }
+
+    & * {
+      transition: 0.2s;
+
+      &:hover {
+        font-size: 3.2rem;
+        color: white;
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 30px;
+  }
+}
+
+.skipNav {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateY(-170%);
+  transition: transform 0.3s;
+  z-index: 999;
+
+  &:focus {
+    transform: translateY(0%);
+  }
+
+  &:hover {
+    background-color: white;
+  }
+}
