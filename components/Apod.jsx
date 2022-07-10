@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useReducer } from "react";
 import { XIcon } from "@heroicons/react/solid";
-import styles from "../styles/Apod.module.scss";
 import Image from "next/image";
 import axios from "axios";
 
@@ -60,16 +59,18 @@ function Apod({ mobileStatus, skipNavRef }) {
   return (
     <>
       {display ? (
-        <div className={styles.contentCtr}>
+        <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-xxlg ">
           <XIcon
-            className="text-[#ffd486] w-10 right-0 top-0 absolute"
+            className="bg-lm-tertiary dark:bg-dm-tertiary w-10 right-0 top-0 absolute"
             onClick={handleClick}
           />
-          <div className={styles.upperCtr}>
-            <h4 className={styles.apodTitle}>Astronomy Picture of the Day</h4>
+          <div className="upperCtr">
+            <h4 className="apodTitle bg-lm-tertiary dark:bg-dm-tertiary">
+              Astronomy Picture of the Day
+            </h4>
 
-            <a href={apodData.hdurl} target="blank">
-              <div className={styles.imgCtr}>
+            <a href="hdurl" target="blank">
+              <div className="imgCtr">
                 <Image
                   src={apodData.url}
                   layout="fill"
@@ -79,8 +80,8 @@ function Apod({ mobileStatus, skipNavRef }) {
               </div>
             </a>
           </div>
-          <div className={styles.lowerCtr}>
-            <div className={styles.titleCtr}>
+          <div className="lowerCtr">
+            <div className="titleCtr">
               <h4>{apodData.title}</h4>
             </div>
             <p>{apodData.explanation}</p>
@@ -88,13 +89,21 @@ function Apod({ mobileStatus, skipNavRef }) {
         </div>
       ) : mobileStatus ? (
         <div>
-          <button ref={skipNavRef} className={styles.btn} onClick={handleClick}>
+          <button
+            ref={skipNavRef}
+            className="apod__btn bg-lm-tertiary dark:bg-dm-tertiary text-white dark:text-black"
+            onClick={handleClick}
+          >
             APOD
           </button>
         </div>
       ) : (
         <div>
-          <button ref={skipNavRef} className={styles.btn} onClick={handleClick}>
+          <button
+            ref={skipNavRef}
+            className="apod__btn bg-lm-tertiary dark:bg-dm-tertiary text-white dark:text-black"
+            onClick={handleClick}
+          >
             Astronomy PoD
           </button>
         </div>

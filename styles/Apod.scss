@@ -3,7 +3,6 @@
 // Content
 .contentCtr {
   position: absolute;
-  background-color: $color-secondary;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -16,8 +15,8 @@
     height: 80vh;
     top: 10vh;
     right: 50px;
-    border-radius: 0.5rem;
-    border: solid 0.5px $color-tertiary;
+    // border-radius: 0.5rem;
+    // border: solid 0.5px $color-tertiary;
   }
 }
 
@@ -33,7 +32,7 @@
   font-family: $font-audiowide;
   font-size: 1rem;
   margin: 10px 50px 0 50px;
-  color: $color-tertiary;
+  // color: $color-tertiary;
 
   @include desktop {
     margin: 10px 100px 0 100px;
@@ -96,13 +95,11 @@
   }
 }
 // Button
-.btn {
+.apod__btn {
   transform: rotate(-90deg);
   position: absolute;
   right: 0;
   top: 10vh;
-  background-color: $color-tertiary;
-  color: $color-primary;
   padding: 4px 8px;
   border-radius: 0.5rem;
 

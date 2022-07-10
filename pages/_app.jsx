@@ -2,6 +2,8 @@ import "../styles/globals.scss";
 import "../styles/Home.scss";
 import "../styles/Navbar.scss";
 import "../styles/about.scss";
+import "../styles/contact.scss";
+import "../styles/Apod.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // FA: import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core"; // FA: -
 config.autoAddCss = false; // FA: Tell Font Awesome to skip adding the CSS automatically since it's being imported above
