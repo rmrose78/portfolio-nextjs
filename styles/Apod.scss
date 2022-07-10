@@ -63,7 +63,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color-tertiary;
+  // color: $color-tertiary;
 
   h4 {
     font-family: $font-audiowide;
@@ -75,8 +75,8 @@
   overflow-y: auto;
   margin: 10px;
   border-radius: 0.5rem;
-  border: solid 0.5px $color-tertiary;
-  background-color: $color-primary;
+  // border: solid 0.5px $color-tertiary;
+  // background-color: $color-primary;
 
   @include desktop {
     width: 95%;
@@ -102,6 +102,7 @@
   top: 10vh;
   padding: 4px 8px;
   border-radius: 0.5rem;
+  z-index: 99;
 
   @include desktop {
     font-size: 1.5rem;
@@ -112,7 +113,6 @@
 
     &:hover {
       padding: 9px 18px;
-      background-color: white;
     }
   }
 }

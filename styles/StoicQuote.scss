@@ -4,11 +4,11 @@
   position: absolute;
   bottom: 20px;
   width: 80%;
-  color: $color-tertiary;
   background-color: rgba(30, 24, 16, 0.6);
   border-radius: 10px;
   padding: 10px;
   margin-left: 5px;
+  z-index: 99;
 
   @include desktop {
     right: 150px;

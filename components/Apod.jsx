@@ -59,7 +59,7 @@ function Apod({ mobileStatus, skipNavRef }) {
   return (
     <>
       {display ? (
-        <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-xxlg ">
+        <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-xxlg">
           <XIcon
             className="bg-lm-tertiary dark:bg-dm-tertiary w-10 right-0 top-0 absolute"
             onClick={handleClick}
@@ -80,8 +80,8 @@ function Apod({ mobileStatus, skipNavRef }) {
               </div>
             </a>
           </div>
-          <div className="lowerCtr">
-            <div className="titleCtr">
+          <div className="lowerCtr border border-lm-tertiary dark:border-dm-tertiary bg-lm-primary dark:bg-dm-primary">
+            <div className="titleCtr text-lm-tertiary dark:text-dm-tertiary">
               <h4>{apodData.title}</h4>
             </div>
             <p>{apodData.explanation}</p>
@@ -91,7 +91,7 @@ function Apod({ mobileStatus, skipNavRef }) {
         <div>
           <button
             ref={skipNavRef}
-            className="apod__btn bg-lm-tertiary dark:bg-dm-tertiary text-white dark:text-black"
+            className="apod__btn bg-lm-primary dark:bg-dm-tertiary text-lm-tertiary dark:text-dm-primary hover:bg-lm-text-secondary hover:dark:bg-white"
             onClick={handleClick}
           >
             APOD
@@ -101,7 +101,7 @@ function Apod({ mobileStatus, skipNavRef }) {
         <div>
           <button
             ref={skipNavRef}
-            className="apod__btn bg-lm-tertiary dark:bg-dm-tertiary text-white dark:text-black"
+            className="apod__btn bg-lm-primary dark:bg-dm-tertiary text-lm-primary dark:text-dm-primary hover:bg-lm-text-secondary hover:dark:bg-white"
             onClick={handleClick}
           >
             Astronomy PoD
