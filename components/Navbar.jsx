@@ -47,9 +47,7 @@ const Navbar = () => {
             <NavElement href="/contact" pathname={pathname}>
               Contact
             </NavElement>
-            <li className="flex justify-center items-center">
-              <DarkmodeToggle size={7} />
-            </li>
+            <DarkmodeToggle />
           </ul>
 
           {/* Hamburger */}

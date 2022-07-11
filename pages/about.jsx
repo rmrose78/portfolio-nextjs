@@ -69,9 +69,9 @@ function About({ mobileStatus }) {
               Development Journey
             </h3>
             <p>
-              Hello, my name is Ryan Rose. I&apos;m a Developer currently based
-              out of the Augusta, GA area. Currently, I&apos;m working and
-              learning React and the Next.js Framework with{" "}
+              Hi, I&apos;m Ryan Rose, a Developer currently based out of the
+              Augusta, GA area. Currently, I&apos;m working and learning React
+              and the Next.js Framework with{" "}
               <a
                 href={"https://vetswhocode.io/about#our_stories"}
                 target="_blank"

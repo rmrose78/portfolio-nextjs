@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 
-function DarkmodeToggle({ size }) {
+function DarkmodeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -10,7 +10,7 @@ function DarkmodeToggle({ size }) {
   const sun = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-7 w-7"
+      className="h-8 w-8"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -25,7 +25,7 @@ function DarkmodeToggle({ size }) {
   const moon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-7 w-7"
+      className="h-8 w-8"
       viewBox="0 0 20 20"
       fill="currentColor"
     >

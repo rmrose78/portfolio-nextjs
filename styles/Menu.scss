@@ -24,7 +24,6 @@
   flex-direction: column;
 
   & li {
-    color: $color-tertiary;
     text-decoration: none;
     padding: 40px;
     font-size: 2rem;
@@ -32,8 +31,6 @@
 }
 
 .activePage {
-  color: $color-tertiary;
-  border-bottom: $color-tertiary;
 }
 
 .inactivePage {
@@ -42,5 +39,5 @@
 .menu__darkmode {
   position: absolute;
   top: 80px;
-  right: 20px;
+  right: 25px;
 }

@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import DarkmodeToggle from "./DarkmodeToggle";
-import NavElement from "./NavElement";
+import MenuElement from "./MenuElement";
 
 function Menu({ menuClick, handleMenuClick }) {
   const pathname = useRouter().pathname;
-
   return (
     <>
       {menuClick ? (
@@ -18,15 +17,23 @@ function Menu({ menuClick, handleMenuClick }) {
             <DarkmodeToggle />
           </div>
           <ul className="menu__list">
-            <NavElement href="/" pathname={pathname}>
+            <MenuElement href="/" pathname={pathname} onClick={handleMenuClick}>
               Home
-            </NavElement>
-            <NavElement href="/about" pathname={pathname}>
+            </MenuElement>
+            <MenuElement
+              href="/about"
+              pathname={pathname}
+              onClick={handleMenuClick}
+            >
               About
-            </NavElement>
-            <NavElement href="/contact" pathname={pathname}>
+            </MenuElement>
+            <MenuElement
+              href="/contact"
+              pathname={pathname}
+              onClick={handleMenuClick}
+            >
               Contact
-            </NavElement>
+            </MenuElement>
           </ul>
         </section>
       ) : (
