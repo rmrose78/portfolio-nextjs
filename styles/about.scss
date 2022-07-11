@@ -11,8 +11,14 @@
 
 .about__main {
   width: 100vw;
-  height: 93vh;
+  height: 100%;
   z-index: -2;
+  min-height: 100vh;
+
+  @include desktop {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 
 .about__titleCtr {

@@ -3,15 +3,28 @@
 .nav {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 7vh;
+  max-height: 60px;
   width: 100vw;
   z-index: 998;
   // Maybe have no border and linear gradient on homepage
 
   @include desktop {
+    position: absolute;
     height: 8vh;
+  }
+}
+
+.nav__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+
+  @include desktop {
+    max-width: 1400px;
   }
 }
 
