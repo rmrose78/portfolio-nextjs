@@ -7,17 +7,17 @@
   display: flex;
   justify-content: center;
   z-index: 99;
-  background-color: $color-secondary;
   height: 110vh;
   width: 100vw;
   overflow: hidden;
+  z-index: 990;
 }
 
 .menuHide {
   display: none;
 }
 
-.list {
+.menu__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,4 +37,10 @@
 }
 
 .inactivePage {
+}
+
+.menu__darkmode {
+  position: absolute;
+  top: 80px;
+  right: 20px;
 }

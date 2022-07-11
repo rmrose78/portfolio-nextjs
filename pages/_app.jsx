@@ -5,6 +5,7 @@ import "../styles/about.scss";
 import "../styles/contact.scss";
 import "../styles/Apod.scss";
 import "../styles/StoicQuote.scss";
+import "../styles/Menu.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // FA: import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core"; // FA: -
 config.autoAddCss = false; // FA: Tell Font Awesome to skip adding the CSS automatically since it's being imported above

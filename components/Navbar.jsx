@@ -3,24 +3,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Divide as Hamburger } from "hamburger-react";
 import Menu from "./Menu";
-import { useTheme } from "next-themes";
 import NavElement from "./NavElement";
+import DarkmodeToggle from "./DarkmodeToggle";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [menuClick, setMenuClick] = useState(false);
-
   const pathname = useRouter().pathname;
-
-  useEffect(() => setMounted(true), []);
+  const { theme, setTheme } = useTheme();
 
   const handleMenuClick = () => {
     setMenuClick(!menuClick);
-    console.log(menuClick);
   };
 
-  if (!mounted) return null;
   return (
     <>
       <Menu handleMenuClick={handleMenuClick} menuClick={menuClick} />
@@ -52,19 +47,18 @@ const Navbar = () => {
             <NavElement href="/contact" pathname={pathname}>
               Contact
             </NavElement>
-            <li>
-              <button
-                className="bg-lm-tertiary dark:bg-dm-tertiary"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                {theme}
-              </button>
+            <li className="flex justify-center items-center">
+              <DarkmodeToggle size={7} />
             </li>
           </ul>
 
           {/* Hamburger */}
           <div className="hamburgerCtr" onClick={handleMenuClick}>
-            <Hamburger color="#ffd486" />
+            <Hamburger
+              color={
+                theme === "dark" ? "hsl(39, 100%, 75%)" : "hsl(39, 20%, 20%)"
+              }
+            />
           </div>
         </div>
       </div>

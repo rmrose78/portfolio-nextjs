@@ -41,6 +41,8 @@
 }
 
 .hamburgerCtr {
+  margin-right: 10px;
+
   @include desktop {
     display: none;
   }
