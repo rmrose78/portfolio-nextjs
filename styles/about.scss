@@ -35,7 +35,7 @@
   height: 300px;
   border-radius: 0.5rem;
   overflow: hidden;
-
+  z-index: 99;
   margin: auto;
 
   & > div {
@@ -44,7 +44,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-
+    z-index: 99;
     -webkit-filter: hue-rotate(180deg);
     filter: hue-rotate(180deg);
 
