@@ -59,13 +59,13 @@ function Apod({ mobileStatus, skipNavRef }) {
   return (
     <>
       {display ? (
-        <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-xxlg">
+        <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-lg">
           <XIcon
             className="bg-lm-tertiary dark:bg-dm-tertiary w-10 right-0 top-0 absolute"
             onClick={handleClick}
           />
           <div className="upperCtr">
-            <h4 className="apodTitle bg-lm-tertiary dark:bg-dm-tertiary">
+            <h4 className="apodTitle text-lm-tertiary dark:text-dm-tertiary">
               Astronomy Picture of the Day
             </h4>
 

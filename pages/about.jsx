@@ -70,8 +70,9 @@ function About({ mobileStatus }) {
             </h3>
             <p>
               Hi, I&apos;m Ryan Rose, a Developer currently based out of the
-              Augusta, GA area. Currently, I&apos;m working and learning React
-              and the Next.js Framework with{" "}
+              Augusta, GA area. I use this website to showcase technologies I am
+              currently working with like React, Next.JS, Sass and Tailwind CSS.
+              I completed training with a focus in Frontend Development with{" "}
               <a
                 href={"https://vetswhocode.io/about#our_stories"}
                 target="_blank"
@@ -80,16 +81,16 @@ function About({ mobileStatus }) {
                 <span className="vetsWhoCode border-b-[1px] border-lm-tertiary dark:border-dm-tertiary hover:text-lm-tertiary dark:hover:text-dm-tertiary">
                   #VetsWhoCode
                 </span>
-              </a>
-              . I find interest in all sides of development, but currently
-              focusing on the Frontend. Constantly learning new things keeps
-              life interesting!
+              </a>{" "}
+              and currently working with my cohort on a project for Veterans
+              that will be intoduced to the site.
             </p>
+            &nbsp;
           </div>
 
           <div>
             <h3 className="text-lm-tertiary dark:text-dm-tertiary">
-              Interests
+              Who am I?
             </h3>
             <p>
               I am Husband, Father, Veteran and hockey fanatic (#LetsGoAvs).

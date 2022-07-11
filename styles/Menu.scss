@@ -1,16 +1,19 @@
 @import "variables";
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   z-index: 99;
-  height: 110vh;
+  height: 100vh;
   width: 100vw;
-  overflow: hidden;
   z-index: 990;
+
+  &::after {
+    position: sticky;
+  }
 }
 
 .menuHide {

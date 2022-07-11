@@ -1,7 +1,7 @@
 @import "variables";
 
 .nav {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 160px;
 }
 
 .nav__name {
