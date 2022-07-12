@@ -17,11 +17,9 @@ export default function Home({ mobileStatus }) {
     <>
       <a
         tabIndex={0}
-        className="skipNav text-lm-secondary dark:text-dm-secondary bg-lm-tertiary dark:bg-dm-tertiary"
         onClick={handleSkipNav}
-        onKeyPress={(e) => {
-          handleSkipNav(e);
-        }}
+        onKeyPress={(e) => handleSkipNav(e)}
+        className="skipNav text-lm-secondary dark:text-dm-secondary bg-lm-tertiary dark:bg-dm-tertiary"
       >
         Skip Navigation
       </a>

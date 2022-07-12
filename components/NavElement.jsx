@@ -8,7 +8,7 @@ function NavElement({ href, children, pathname }) {
         className={`${
           pathname === href
             ? "text-lm-tertiary dark:text-dm-tertiary border-b border-lm-tertiary dark:border-dm-tertiary"
-            : "hover:text-lm-tertiary dark:hover:text-dm-tertiary border-b hover:border-lm-tertiary dark:hover:border-dm-tertiary border-lm-secondary dark:border-dm-secondary"
+            : "hover:text-lm-tertiary dark:hover:text-dm-tertiary border-b hover:border-lm-tertiary dark:hover:border-dm-tertiary border-lm-primary dark:border-dm-secondary"
         }`}
       >
         <Link href={href}>

@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <Menu handleMenuClick={handleMenuClick} menuClick={menuClick} />
-      <div className="nav border-b border-lm-tertiary dark:border-dm-tertiary bg-lm-secondary dark:bg-dm-secondary">
+      <div className="nav border-b border-lm-tertiary dark:border-dm-tertiary  bg-lm-primary dark:bg-dm-secondary">
         <div className="nav__contents">
           <div className="nameLogoCtr">
             <Link href={"/"}>

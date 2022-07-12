@@ -35,7 +35,7 @@ function Contact() {
               <input
                 type="name"
                 name="name"
-                className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border--lm-text-primary dark:border-dm-text-primary"
+                className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border-lm-text-primary dark:border-dm-text-primary"
                 required
               />
             </div>
@@ -49,7 +49,7 @@ function Contact() {
               <input
                 type="name"
                 name="last&nbsp;name"
-                className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border--lm-text-primary dark:border-dm-text-primary"
+                className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border-lm-text-primary dark:border-dm-text-primary"
                 required
               />
             </div>
@@ -65,7 +65,7 @@ function Contact() {
             <input
               type="email"
               name="email"
-              className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border--lm-text-primary dark:border-dm-text-primary"
+              className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border-lm-text-primary dark:border-dm-text-primary"
               required
             />
           </div>
@@ -79,7 +79,7 @@ function Contact() {
             <textarea
               name="message"
               rows="4"
-              className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border--lm-text-primary dark:border-dm-text-primary"
+              className="text-lm-tertiary dark:text-dm-tertiary border-[1px] rounded-lg border-lm-text-primary dark:border-dm-text-primary"
               required
             ></textarea>
           </div>

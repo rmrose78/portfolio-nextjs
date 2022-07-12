@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider attribute="class">
-      <div className="bg-white dark:bg-dm-primary -z-99">
+      <div className="bg-lm-secondary dark:bg-dm-primary -z-99">
         <Component {...pageProps} mobileStatus={mobileStatus} />
       </div>
     </ThemeProvider>
