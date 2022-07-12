@@ -35,6 +35,7 @@
   margin: 40px auto;
 
   @include desktop {
+    max-width: 600px;
     width: 40%;
   }
 
