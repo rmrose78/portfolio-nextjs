@@ -26,16 +26,17 @@ export default function Home({ mobileStatus }) {
       <Navbar />
       <StoicQuote />
       <Apod mobileStatus={mobileStatus} skipNavRef={skipNavRef} />
-      <div className="bgImage">
-        <Image
-          priority
-          src={bgImage}
-          layout="fill"
-          objectFit="cover"
-          alt="Spaceman reachin with Earth in the background"
-        />
+      <div className="img-filter">
+        <div className="bgImage">
+          <Image
+            priority
+            src={bgImage}
+            layout="fill"
+            objectFit="cover"
+            alt="Spaceman reachin with Earth in the background"
+          />
+        </div>
       </div>
-
       <main id="main" className="main">
         {/* Title banner */}
         <div className="mainTextCtr text-lm-secondary dark:text-dm-secondary">

@@ -61,7 +61,7 @@ function Apod({ mobileStatus, skipNavRef }) {
       {display ? (
         <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-lg">
           <XIcon
-            className="bg-lm-tertiary dark:bg-dm-tertiary w-10 right-0 top-0 absolute"
+            className="text-lm-tertiary dark:text-dm-tertiary w-10 right-0 top-0 absolute"
             onClick={handleClick}
           />
           <div className="upperCtr">
@@ -84,7 +84,7 @@ function Apod({ mobileStatus, skipNavRef }) {
             <div className="titleCtr text-lm-tertiary dark:text-dm-tertiary">
               <h4>{apodData.title}</h4>
             </div>
-            <p>{apodData.explanation}</p>
+            <p className="text-lm-tertiary">{apodData.explanation}</p>
           </div>
         </div>
       ) : mobileStatus ? (
