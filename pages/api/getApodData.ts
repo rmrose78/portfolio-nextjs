@@ -23,12 +23,16 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       retries++;
 
       if (axios.isAxiosError(error)) {
+        console.error(
+          `Error fetching APOD data (attempt ${retries}): ${error.message}`
+        );
         if (error.response) {
           console.error(`Response status: ${error.response.status}`);
         }
       } else {
         console.error(
-          `Error fetching APOD data (attempt ${retries}): ${error}`
+          `Error fetching APOD data (attempt ${retries}):`,
+          error instanceof Error ? error.message : error
         );
       }
     }
