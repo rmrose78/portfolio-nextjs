@@ -41,25 +41,25 @@ function About({ mobileStatus }) {
               <div className="techCtr">
                 <div className="techIconCtr">
                   <div>
-                    <Image src={html5} alt="react" />
+                    <Image src={html5} alt="HTML5" />
                   </div>
                   <div>
-                    <Image src={css3} alt="nextjs" />
+                    <Image src={css3} alt="CSS3" />
                   </div>
                   <div>
-                    <Image src={javascript} alt="react" />
+                    <Image src={javascript} alt="JavaScript" />
                   </div>
                   <div>
-                    <Image src={sass} alt="react" />
+                    <Image src={sass} alt="Sass" />
                   </div>
                   <div>
-                    <Image src={reactImage} alt="react" />
+                    <Image src={reactImage} alt="React" />
                   </div>
                   <div>
-                    <Image src={nextjsImage} alt="react" />
+                    <Image src={nextjsImage} alt="Next.js" />
                   </div>
                   <div>
-                    <Image src={git} alt="react" />
+                    <Image src={git} alt="Git" />
                   </div>
                 </div>
               </div>
@@ -70,13 +70,11 @@ function About({ mobileStatus }) {
                 Development Journey
               </h3>
               <p>
-                Hi, I&apos;m Ryan Rose, a Developer currently based out of the
-                Augusta, GA area. I use this website to showcase technologies I
-                am currently working with like React, Next.JS, Sass and Tailwind
-                CSS. I completed training with a focus in Frontend Development
-                with{" "}
+                Hi, I&apos;m Ryan Rose, a Frontend Developer with nearly four
+                years of production experience building React and TypeScript
+                applications. I got my start in web development through{" "}
                 <a
-                  href={"https://vetswhocode.io/about#our_stories"}
+                  href={"https://vetswhocode.io/about-us"}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -84,8 +82,10 @@ function About({ mobileStatus }) {
                     #VetsWhoCode
                   </span>
                 </a>{" "}
-                and currently working with my cohort on a project for Veterans
-                that will be intoduced to the site.
+                and have since spent those years building responsive interfaces
+                in a professional setting. I care about clean, maintainable code
+                and building things that actually work well for the people using
+                them.
               </p>
               &nbsp;
             </div>
@@ -95,10 +95,12 @@ function About({ mobileStatus }) {
                 Interests
               </h3>
               <p>
-                I am Husband, Father, Veteran and hockey fanatic (#LetsGoAvs).
-                When I am not working on improving in web development, I like to
-                explore different hobbies. Homebrewing and playing guitar have
-                been my go to.
+                I am a Husband, Father of three, U.S. Army Veteran, and hockey
+                fanatic (#LetsGoAvs). Outside of work I spend most of my time
+                with my kids, reading, and playing guitar. I have always been
+                drawn to building things that matter, which led me from
+                Biomedical Engineering to software development. Also I just
+                really love space.
               </p>
             </div>
           </div>

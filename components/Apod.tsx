@@ -9,23 +9,22 @@ interface ApodData {
   explanation: string;
 }
 
-type State = {
+interface State {
   loading: boolean;
   error: string | null | undefined;
   apodData: ApodData | null | undefined;
-};
-
-enum ACTIONS {
-  CALL_API = "call-api",
-  SUCCESS = "success",
-  ERROR = "error",
 }
 
-interface Action {
-  type: ACTIONS;
-  data?: ApodData;
-  error?: string;
-}
+type Action =
+  | { type: typeof ACTIONS.CALL_API }
+  | { type: typeof ACTIONS.SUCCESS; data: ApodData }
+  | { type: typeof ACTIONS.ERROR; error: string };
+
+const ACTIONS = {
+  CALL_API: "call-api",
+  SUCCESS: "success",
+  ERROR: "error",
+} as const;
 
 const apodDataReducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -64,7 +63,9 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
         dispatch({ type: ACTIONS.SUCCESS, data: response?.data });
       } catch (error) {
         console.error(error);
-        dispatch({ type: ACTIONS.ERROR, error: error?.message });
+        const errorMessage =
+          error instanceof Error ? error.message : "An error occurred";
+        dispatch({ type: ACTIONS.ERROR, error: errorMessage });
       }
     };
 

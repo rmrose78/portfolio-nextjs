@@ -15,20 +15,26 @@ const defaultData = {
 
 const StoicQuote: React.FC = () => {
   const [data, setData] = useState<Data>(defaultData);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     const getStoicQuote = async () => {
       try {
         const response = await axios.get(
-          `https://api.themotivate365.com/stoic-quote`
+          `https://api.themotivate365.com/stoic-quote`,
         );
         setData(response?.data);
       } catch (error) {
         console.error(`Error found: ${error}`);
+        setHasError(true);
       }
     };
     getStoicQuote();
   }, []);
+
+  if (hasError) {
+    return null;
+  }
 
   return (
     <>

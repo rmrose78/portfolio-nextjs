@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <Menu handleMenuClick={handleMenuClick} menuClick={menuClick} />
-      <div className="nav border-b border-lm-tertiary dark:border-dm-tertiary  bg-lm-primary dark:bg-dm-secondary">
+      <div className="nav border-b border-lm-tertiary dark:border-dm-tertiary  bg-lm-primary dark:bg-dm-secondary min-h-[50px]">
         <div className="nav__contents">
           <div className="nameLogoCtr">
             <Link href={"/"}>
