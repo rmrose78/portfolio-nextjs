@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["apod.nasa.gov"],
+    unoptimized: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

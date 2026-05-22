@@ -103,16 +103,19 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
           Astronomy Picture of the Day
         </h4>
 
-        <a href={apodData?.url} target="_blank" rel="noreferrer">
-          <div className="imgCtr">
-            <Image
-              src={apodData?.url ? apodData?.url : ""}
-              layout="fill"
-              objectFit="contain"
-              alt="Nasa Astronomy of the Day"
-            />
-          </div>
-        </a>
+        {apodData?.url ? (
+          <a href={apodData.url} target="_blank" rel="noreferrer">
+            <div className="imgCtr">
+              <Image
+                src={apodData.url}
+                layout="fill"
+                objectFit="contain"
+                alt="Nasa Astronomy of the Day"
+                unoptimized
+              />
+            </div>
+          </a>
+        ) : null}
       </div>
       <div className="lowerCtr border border-lm-tertiary dark:border-dm-tertiary bg-lm-primary dark:bg-dm-primary">
         <div className="titleCtr text-lm-tertiary dark:text-dm-tertiary">

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import profilePic from "../public/images/twitterPic.jpeg";
 import reactImage from "../public/images/techStackImages/react.svg";
 import nextjsImage from "../public/images/techStackImages/nextjs.svg";
 import html5 from "../public/images/techStackImages/html5.svg";
@@ -26,7 +25,7 @@ function About({ mobileStatus }) {
               <div className="profilePic border-4 border-lm-secondary dark:border-dm-secondary">
                 <Image
                   priority
-                  src={profilePic}
+                  src="/images/twitterPic.jpeg"
                   layout="fill"
                   objectFit="cover"
                   alt="Ryan with daughter wearing sunglasses"

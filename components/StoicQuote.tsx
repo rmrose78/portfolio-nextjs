@@ -1,5 +1,4 @@
 import axios from "axios";
-import { error } from "console";
 import { useEffect, useState } from "react";
 import ScaleText from "react-scale-text";
 
@@ -24,8 +23,9 @@ const StoicQuote: React.FC = () => {
           `https://api.themotivate365.com/stoic-quote`,
         );
         setData(response?.data);
-      } catch (error) {
-        console.error(`Error found: ${error}`);
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error("StoicQuote error:", msg);
         setHasError(true);
       }
     };

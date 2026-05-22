@@ -2,7 +2,6 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Apod from "../components/Apod";
 import React, { useEffect, useRef, useState } from "react";
-import bgImage from "../public/images/astronaut.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StoicQuote from "../components/StoicQuote";
 
@@ -30,7 +29,7 @@ export default function Home({ mobileStatus }) {
         <div className="bgImage">
           <Image
             priority
-            src={bgImage}
+            src="/images/astronaut.jpeg"
             layout="fill"
             objectFit="cover"
             alt="Spaceman reachin with Earth in the background"
