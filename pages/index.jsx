@@ -30,6 +30,7 @@ export default function Home({ mobileStatus }) {
           <Image
             priority
             src="/images/astronaut.jpeg"
+            unoptimized
             layout="fill"
             objectFit="cover"
             alt="Spaceman reachin with Earth in the background"
