@@ -60,7 +60,7 @@ export default function Home({ mobileStatus }) {
         </div>
 
         {/* Pitch and Social */}
-        <div className="relative z-10 w-full max-w-sm md:max-w-xl px-4 py-3 bg-lm-secondary dark:bg-dm-secondary border rounded-lg text-lm-tertiary dark:text-dm-tertiary text-center">
+        <div className="relative z-10 w-full max-w-sm md:max-w-xl px-4 py-3 bg-lm-secondary dark:bg-dm-secondary border rounded-lg text-lm-tertiary dark:text-dm-tertiary text-center opacity-90">
           <p className="pitchText">
             Frontend Developer with nearly four years of production experience
             in React and TypeScript. I have a background in Biomedical

@@ -23,17 +23,14 @@ const quotes: Data[] = [
       "Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic.",
     author: "Frank Herbert, Dune",
   },
-  // The Blade Itself
   {
-    quote: "The blade itself incites to deeds of violence.",
-    author: "Joe Abercrombie, The Blade Itself",
+    quote:
+      "Without change, something sleeps inside us and seldom awakens. The sleeper must awaken.",
+    author: "Frank Herbert, Dune",
   },
+  // First Law
   {
-    quote: "You have to be realistic about these things.",
-    author: "Joe Abercrombie, The Blade Itself",
-  },
-  {
-    quote: "There are no solutions, only compromises.",
+    quote: "Better to do a thing than live with the fear of it.",
     author: "Joe Abercrombie, The First Law",
   },
   // Stoic
@@ -59,6 +56,19 @@ const quotes: Data[] = [
   {
     quote: "He who fears death will never do anything worthy of a living man.",
     author: "Seneca",
+  },
+  // Other
+  {
+    quote: "The most important step a man can take is the next one.",
+    author: "Brandon Sanderson, The Way of Kings",
+  },
+  {
+    quote: "The universe is not required to make sense to you.",
+    author: "Adrian Tchaikovsky, Children of Time",
+  },
+  {
+    quote: "The universe is a pretty big place. Whatever you do, it matters.",
+    author: "James S.A. Corey, Leviathan Wakes",
   },
 ];
 

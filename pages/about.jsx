@@ -99,8 +99,8 @@ function About({ mobileStatus }) {
                 fanatic (#LetsGoAvs). Outside of work I spend most of my time
                 with my kids, reading, and playing guitar. I have always been
                 drawn to building things that matter, which led me from
-                Biomedical Engineering to software development. Also I just
-                really love space.
+                Biomedical Engineering to software development. Also, science
+                and space have always fascinated me.
               </p>
             </div>
           </div>
