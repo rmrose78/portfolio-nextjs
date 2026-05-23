@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Apod from "../components/Apod";
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import StoicQuote from "../components/StoicQuote";
+import Quote from "../components/Quote";
 
 export default function Home({ mobileStatus }) {
   const skipNavRef = useRef();
@@ -27,7 +27,7 @@ export default function Home({ mobileStatus }) {
         Skip Navigation
       </a>
       <Navbar />
-      <StoicQuote />
+      <Quote />
       <Apod mobileStatus={mobileStatus} skipNavRef={skipNavRef} />
       <div className="img-filter">
         <div className="bgImage">

@@ -98,16 +98,16 @@
 .apod__btn {
   transform: rotate(-90deg);
   position: absolute;
-  right: 10px;
-  top: 10vh;
+  right: -25px;
+  top: 105px;
   padding: 6px 12px;
   border-radius: 0.5rem;
   z-index: 99;
 
   @include desktop {
     font-size: 1.5rem;
-    top: 15vh;
-    right: 20px;
+    top: 130px;
+    right: -40px;
     padding: 8px 16px;
     transition: 0.3s;
 

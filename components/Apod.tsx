@@ -78,7 +78,7 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
   };
 
   const renderButton = () => (
-    <div>
+    <>
       <button
         ref={skipNavRef}
         className={`apod__btn bg-lm-primary dark:bg-dm-tertiary text-lm-${
@@ -86,9 +86,9 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
         } dark:text-dm-primary hover:bg-lm-text-secondary hover:dark:bg-white`}
         onClick={handleClick}
       >
-        {mobileStatus ? "APOD" : "Astronomy PoD"}
+        {`Today in Space`}
       </button>
-    </div>
+    </>
   );
 
   const renderContent = () => (

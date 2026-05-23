@@ -12,15 +12,20 @@ function NavElement({ href, children, pathname }) {
         }`}
       >
         <Link href={href}>
-          <h5 className="hover:text-lm-tertiary dark:hover:text-dm-tertiary hover:border-lm-tertiary dark:hover:border-dm-tertiary uppercase">
-            {children}
-          </h5>
+          <a
+            // tabIndex={0}
+            role="button"
+            aria-label={`Navigate to ${children}`}
+            aria-current={pathname === href ? "page" : undefined}
+          >
+            <h5 className="hover:text-lm-tertiary dark:hover:text-dm-tertiary hover:border-lm-tertiary dark:hover:border-dm-tertiary uppercase font-bold text-lg">
+              {children}
+            </h5>
+          </a>
         </Link>
       </li>
     </>
   );
 }
-
-// className={`${pathname === "/" ? "text-lm-tertiary dark:text-dm-tertiary" : "hover:text-lm-tertiary dark:hover:text-dm-tertiary"}`}
 
 export default NavElement;
