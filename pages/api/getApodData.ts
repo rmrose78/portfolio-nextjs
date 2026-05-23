@@ -5,7 +5,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const maxRetries = 3;
   let retries = 0;
   let data: any = null;
-  const apiKey = process.env.NEXT_PUBLIC_APOD_API_KEY;
+  const apiKey = process.env.NODE_ENV_APOD_API_KEY;
 
   if (!apiKey) {
     res.status(500).send("API key is missing or not defined.");

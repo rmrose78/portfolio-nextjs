@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import ScaleText from "react-scale-text";
-
 interface Data {
   author: string;
   quote: string;
@@ -83,11 +81,9 @@ const Quote: React.FC = () => {
   return (
     <div className="mainCtr">
       <div className="bodyCtr">
-        <ScaleText minFontSize={5} maxFontSize={20}>
-          <p className="text-lm-primary dark:text-dm-tertiary">
-            {`"${data.quote}"`}
-          </p>
-        </ScaleText>
+        <p className="text-lm-primary dark:text-dm-tertiary">
+          {`"${data.quote}"`}
+        </p>
       </div>
       <p>
         <span className="author text-lm-primary dark:text-dm-tertiary">

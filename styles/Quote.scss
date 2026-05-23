@@ -18,8 +18,9 @@
 
 .bodyCtr {
   width: 100%;
-  height: 60px;
-  overflow: hidden;
+  overflow: visible;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 .author {
