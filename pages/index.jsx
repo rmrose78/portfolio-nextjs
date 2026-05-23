@@ -63,10 +63,9 @@ export default function Home({ mobileStatus }) {
         <div className="relative z-10 w-full max-w-sm md:max-w-xl px-4 py-3 bg-lm-secondary dark:bg-dm-secondary border rounded-lg text-lm-tertiary dark:text-dm-tertiary text-center opacity-90">
           <p className="pitchText">
             Frontend Developer with nearly four years of production experience
-            in React and TypeScript. I have a background in Biomedical
-            Engineering and U.S. Army service, and I am drawn to building things
-            that actually make a difference. Also I have a thing for space,
-            which explains all of this.
+            in React. U.S. Army Veteran and Biomedical Engineering graduate,
+            drawn to building things that actually make a difference. Also, I
+            have a thing for space, which explains all of this.
           </p>
           <div className="pitchIcons flex flex-row justify-center gap-6 mt-3">
             <a
