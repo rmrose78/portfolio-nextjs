@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   while (retries < maxRetries) {
     try {
       const response = await axios.get(
-        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
+        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`,
       );
       data = response.data;
       break;
@@ -24,7 +24,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       if (axios.isAxiosError(error)) {
         console.error(
-          `Error fetching APOD data (attempt ${retries}): ${error.message}`
+          `Error fetching APOD data (attempt ${retries}): ${error.message}`,
         );
         if (error.response) {
           console.error(`Response status: ${error.response.status}`);
@@ -32,7 +32,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       } else {
         console.error(
           `Error fetching APOD data (attempt ${retries}):`,
-          error instanceof Error ? error.message : error
+          error instanceof Error ? error.message : error,
         );
       }
     }

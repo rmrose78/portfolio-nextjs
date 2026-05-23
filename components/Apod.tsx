@@ -59,7 +59,6 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
     const getApodData = async () => {
       try {
         const response = await axios.get<ApodData>("api/getApodData");
-        console.log({ response });
         dispatch({ type: ACTIONS.SUCCESS, data: response?.data });
       } catch (error) {
         console.error(error);
@@ -94,10 +93,13 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
 
   const renderContent = () => (
     <div className="contentCtr bg-lm-secondary dark:bg-dm-secondary border rounded-lg">
-      <XIcon
-        className="cursor-pointer text-lm-tertiary dark:text-dm-tertiary w-10 right-0 top-0 absolute"
+      <button
         onClick={handleClick}
-      />
+        aria-label="Close Astronomy Picture of the Day modal"
+        className="absolute right-0 top-0 p-2 cursor-pointer text-lm-tertiary dark:text-dm-tertiary focus-visible:outline-2 focus-visible:outline-offset-2"
+      >
+        <XIcon className="w-6 h-6" />
+      </button>
       <div className="upperCtr">
         <h4 className="apodTitle text-lm-tertiary dark:text-dm-tertiary">
           Astronomy Picture of the Day
