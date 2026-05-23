@@ -14,18 +14,24 @@ function Contact() {
     const formData = new FormData(e.target);
 
     try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/ryan.rose.dev@gmail.com",
-        {
-          method: "POST",
-          headers: { accept: "application/json" },
-          body: formData,
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-      );
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          firstName: formData.get("firstName"),
+          lastName: formData.get("lastName"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        }),
+      });
 
       const data = await response.json();
 
-      if (data.success === "true" || data.success === true) {
+      if (data.success) {
         setSubmitted(true);
       } else {
         setError(
