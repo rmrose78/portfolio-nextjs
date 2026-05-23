@@ -26,6 +26,7 @@ function About({ mobileStatus }) {
                 <Image
                   priority
                   src="/images/twitterPic.jpeg"
+                  unoptimized
                   layout="fill"
                   objectFit="cover"
                   alt="Ryan with daughter wearing sunglasses"

@@ -57,9 +57,18 @@ const Navbar: React.FC = () => {
             </ul>
 
             {/* Hamburger */}
-            <div className="hamburgerCtr" onClick={handleMenuClick}>
-              <Hamburger color={hamburgerColor || undefined} />
-            </div>
+            <button
+              className="hamburgerCtr"
+              onClick={handleMenuClick}
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuClick}
+            >
+              <Hamburger
+                color={hamburgerColor || undefined}
+                toggled={menuClick}
+                toggle={setMenuClick}
+              />
+            </button>
           </div>
         </div>
       </div>
