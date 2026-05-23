@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Apod from "../components/Apod";
 import React, { useEffect, useRef, useState } from "react";
@@ -14,6 +15,9 @@ export default function Home({ mobileStatus }) {
 
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href="/images/astronaut.jpeg" />
+      </Head>
       <a
         tabIndex={0}
         onClick={handleSkipNav}
@@ -42,13 +46,15 @@ export default function Home({ mobileStatus }) {
         className="main flex flex-col items-center justify-center"
       >
         {/* Title centered on page */}
-        <div className="relative z-10 flex flex-col items-center justify-center flex-1 max-h-[20rem]">
-          <div className="mainTextCtr text-lm-secondary dark:text-dm-secondary">
-            <h1>-- Hi I&apos;m --</h1>
-            <div className="titleCtr text-lm-secondary dark:text-dm-secondary">
-              <h3 className="text-lm-secondary dark:text-dm-secondary">
-                A Frontend Developer
-              </h3>
+        <div className="textSection">
+          <div className="textBackdrop">
+            <div className="mainTextCtr text-lm-secondary dark:text-dm-secondary">
+              <h1>-- Frontend Developer --</h1>
+              <div className="titleCtr text-lm-secondary dark:text-dm-secondary">
+                <h3 className="text-lm-secondary dark:text-dm-secondary">
+                  Make things that matter
+                </h3>
+              </div>
             </div>
           </div>
         </div>

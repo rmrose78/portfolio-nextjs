@@ -133,7 +133,10 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
   }
 
   if (error) {
-    return <div>Error found: {error}</div>;
+    // Don't render the component UI when the APOD API fails in production.
+    // The error is already logged in the catch; return null to avoid showing
+    // an intrusive error message at the top of the page.
+    return null;
   }
 
   return <>{display ? renderContent() : renderButton()}</>;

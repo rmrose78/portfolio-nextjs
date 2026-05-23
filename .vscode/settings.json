@@ -10,5 +10,7 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "css.customData": [".vscode/tailwind.json"],
+  "scss.customData": [".vscode/tailwind.json"]
 }

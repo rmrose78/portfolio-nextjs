@@ -3,9 +3,43 @@ import Navbar from "../components/Navbar";
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = () => {
-    setSubmitted(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/ryan.rose.dev@gmail.com",
+        {
+          method: "POST",
+          headers: { accept: "application/json" },
+          body: formData,
+        },
+      );
+
+      const data = await response.json();
+
+      if (data.success === "true" || data.success === true) {
+        setSubmitted(true);
+      } else {
+        setError(
+          "An error occurred while submitting the form. Please try again.",
+        );
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setError(
+        "An error occurred while submitting the form. Please try again.",
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -21,11 +55,7 @@ function Contact() {
         </div>
 
         {!submitted ? (
-          <form
-            className="form"
-            action="https://formsubmit.co/a4e46790d16085ee55ce540fef11f6a8"
-            method="POST"
-          >
+          <form className="form" onSubmit={handleSubmit}>
             <div className="nameCtr">
               <div>
                 <label
@@ -91,23 +121,17 @@ function Contact() {
               ></textarea>
             </div>
 
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+
             <div className="btnCtr">
               <button
                 type="submit"
+                disabled={loading}
                 className="text-lm-secondary dark:text-dm-secondary bg-lm-tertiary dark:bg-dm-tertiary"
-                onClick={handleSubmit}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
-
-            <input type="hidden" name="_subject" value="New submission!" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://ryanrose.netlify.app"
-            />
-            <input type="hidden" name="_captcha" value="false" />
           </form>
         ) : (
           <div className="thankYouCtr">

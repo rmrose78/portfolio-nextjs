@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  background: linear-gradient(#e66465, #9198e5);
+  background: #bd9a75;
 }
 
 .img-filter {
@@ -30,9 +30,9 @@
 }
 
 .pitchText {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: normal;
-  text-align: left;
+  // text-align: left;
 }
 
 .pitchIcons {
@@ -102,5 +102,29 @@
 
   &:hover {
     background-color: white;
+  }
+}
+
+.textSection {
+  @apply relative z-10 flex flex-col items-center justify-center flex-1 max-h-[20rem];
+}
+
+.textBackdrop {
+  position: relative;
+  padding: 1rem 3rem;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(189, 154, 117, 0.35) 0%,
+      rgba(189, 154, 117, 0.15) 50%,
+      rgba(189, 154, 117, 0) 100%
+    );
+    border-radius: 8px;
+    pointer-events: none;
   }
 }
