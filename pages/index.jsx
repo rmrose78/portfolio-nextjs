@@ -48,12 +48,10 @@ export default function Home({ mobileStatus }) {
         {/* Title centered on page */}
         <div className="textSection">
           <div className="textBackdrop">
-            <div className="mainTextCtr text-lm-secondary dark:text-dm-secondary">
+            <div className="mainTextCtr text-dm-secondary">
               <h1>-- Frontend Developer --</h1>
-              <div className="titleCtr text-lm-secondary dark:text-dm-secondary">
-                <h3 className="text-lm-secondary dark:text-dm-secondary">
-                  Make things that matter
-                </h3>
+              <div className="titleCtr">
+                <h3 className="text-dm-secondary">Make things that matter</h3>
               </div>
             </div>
           </div>

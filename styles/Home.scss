@@ -5,7 +5,11 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  background: #bd9a75;
+  @apply bg-lm-primary dark:bg-dm-accent;
+}
+
+.light .bgImage img {
+  opacity: 0.7;
 }
 
 .img-filter {
@@ -41,6 +45,10 @@
 
 .mainTextCtr {
   z-index: 9;
+}
+
+.light .mainTextCtr {
+  opacity: 0.7;
 }
 
 .titleCtr {

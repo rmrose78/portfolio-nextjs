@@ -27,6 +27,7 @@ module.exports = {
         "lm-tertiary": "hsl(39, 20%, 20%)",
         "lm-text-primary": "hsl(190, 30%, 20%);",
         "lm-text-secondary": "hsl(210, 30%, 40%)",
+        "dm-accent": "hsl(30, 36%, 60%)",
       },
     },
   },
