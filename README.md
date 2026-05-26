@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ryan Rose — Portfolio
+
+Personal portfolio site for Ryan Rose, Frontend Developer, U.S. Army Veteran, and Biomedical Engineering graduate.
+
+🌐 **Live site:** [ryanmrose.com](https://ryanmrose.com)
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 12.1.6
+- **UI Library:** React 18 + TypeScript
+- **Styling:** Tailwind CSS, SCSS Modules
+- **Theming:** Dark/light mode via `next-themes`
+- **Deployment:** Netlify
+
+## Features
+
+- 🌗 Dark/light mode toggle with hydration-safe mounting guard
+- 🚀 NASA Astronomy Picture of the Day (APOD) fetched via internal API route
+- 💬 Random quotes from Dune, The First Law, and Stoic philosophy
+- 📬 Contact form powered by Web3Forms
+- ♿ Accessible: skip nav, `aria-label`, `aria-current`, `aria-expanded`, focus-visible outlines
+- 📱 Responsive layout with mobile hamburger menu
+
+## Project Structure
+pages/
+index.jsx         # Home — astronaut background, pitch text, APOD, Quote
+about.jsx         # About — bio, profile pic, tech stack icons
+contact.jsx       # Contact — Web3Forms ajax integration
+api/
+getApodData.ts  # Server-side NASA APOD API proxy
+components/
+Navbar.tsx
+NavElement.tsx
+DarkmodeToggle.tsx
+Menu.tsx
+Apod.tsx
+Quote.tsx
+Contact.tsx
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Create a `.env.local` file in the root with the following:
+NEXT_PUBLIC_APOD_API_KEY=your_nasa_api_key
+NEXT_PUBLIC_WEB3FORMS_KEY=your_web3forms_key
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- NASA API key: [https://api.nasa.gov](https://api.nasa.gov)
+- Web3Forms key: [https://web3forms.com](https://web3forms.com)
 
-## Learn More
+> `.env.local` is gitignored and should never be committed.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deployed on **Netlify**. All environment variables are set in the Netlify dashboard under Site Settings → Environment Variables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Notes on Next.js 12
 
-## Deploy on Vercel
+This project uses Next.js **12.1.6**, which requires explicit `<a>` tags inside `<Link>` components. This is intentional and should not be "upgraded" to the Next 13+ auto-anchor pattern without a broader migration.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Built by [Ryan Rose](https://ryanmrose.com) · [GitHub](https://github.com/rmrose78) · [LinkedIn](https://www.linkedin.com/in/ryan-rose-272626170/)
