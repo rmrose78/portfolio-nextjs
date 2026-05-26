@@ -102,7 +102,7 @@ const Apod: React.FC<Props> = ({ mobileStatus, skipNavRef }) => {
       </button>
       <div className="upperCtr">
         <h4 className="apodTitle text-lm-tertiary dark:text-dm-tertiary">
-          Astronomy Picture of the Day
+          NASA Picture of the Day
         </h4>
 
         {apodData?.url ? (

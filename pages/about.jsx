@@ -83,9 +83,11 @@ function About({ mobileStatus }) {
                   </span>
                 </a>{" "}
                 and have since spent those years building responsive interfaces
-                in a professional setting. I care about clean, maintainable code
-                and building things that actually work well for the people using
-                them.
+                in a professional setting. Lately I have been expanding into
+                fullstack work, building a Python FastAPI backend paired with a
+                React frontend to surface trending research from PubMed. I care
+                about clean, maintainable code and building things that actually
+                work well for the people using them.
               </p>
               &nbsp;
             </div>
@@ -98,9 +100,10 @@ function About({ mobileStatus }) {
                 I am a Husband, Father of three, U.S. Army Veteran, and hockey
                 fanatic (#LetsGoAvs). Outside of work I spend most of my time
                 with my kids, reading, and playing guitar. I have always been
-                drawn to building things that matter, which led me from
-                Biomedical Engineering to software development. Also, science
-                and space have always fascinated me.
+                drawn to building things that matter, which is what led me from
+                Biomedical Engineering to software development. Science and
+                space have always fascinated me too, which probably explains the
+                rest of this site.
               </p>
             </div>
           </div>
